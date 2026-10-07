@@ -11,6 +11,27 @@ class BasicLL {
             this.data = data;
             this.next = null;
         }
+
+
+    }
+
+//    static void printLL(Node head){
+//        Node  temp = head;
+//        while(temp!=null){
+//            System.out.print(temp.data+"->");
+//            temp=temp.next;
+//        }
+
+
+        static void printLL2(Node head){
+
+
+        if(head == null){
+            return;
+        }
+        System.out.print(head.data+"->");
+        printLL2(head.next);
+
     }
 
     public static void main(String[] args) {
@@ -23,14 +44,8 @@ class BasicLL {
         // Nodes connect
         first.next = second;
         second.next = third;
-
-        // Print linked list
-        Node temp = first;
-
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
+        Node head = first;
+        printLL2(head);
 
         System.out.println("null");
     }
