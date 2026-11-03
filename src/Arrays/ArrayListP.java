@@ -21,8 +21,8 @@ public class ArrayListP {
 //        }
 //        System.out.println(arr);
 
-        ArrayList<Integer> list1 = new ArrayList<>();
-        list1.addAll(Arrays.asList(1, 2, 3, 4, 5));
+//        ArrayList<Integer> list1 = new ArrayList<>();
+//        list1.addAll(Arrays.asList(1, 2, 3, 4, 5, 1));
 
         // clone list
 //        ArrayList list2 = new ArrayList();
@@ -55,9 +55,34 @@ public class ArrayListP {
 //        display(arr);
 
 
-        System.out.println(list1.get(1));
-        list1.set(1, 10);
-        System.out.println(list1);
+//        System.out.println(list1.get(1));
+//        list1.set(1, 10);
+//        System.out.println(list1);
+//        Collections.sort(list1);
+//        System.out.println(list1);
+
+//        System.out.println(list1.remove(Integer.valueOf(2)));
+//        System.out.println(list1);
+//        System.out.println(list1.removeAll(list1));
+//        System.out.println(list1);
+//        list1.clear();
+
+
+
+
+
+        int arr[] = {2, 4, 5,6, 3, 1};
+        int k = 3;
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        for(int num : arr){
+            pq.add(num);
+
+            if(pq.size()>k){
+                pq.poll();
+            }
+        }
+        System.out.println(pq.peek());
+
 
 
 
