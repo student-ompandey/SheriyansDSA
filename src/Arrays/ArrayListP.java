@@ -73,15 +73,28 @@ public class ArrayListP {
 
         int arr[] = {2, 4, 5,6, 3, 1};
         int k = 3;
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
-        for(int num : arr){
-            pq.add(num);
+//        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+//        for(int num : arr){
+//            pq.add(num);
+//
+//            if(pq.size()>k){
+//                pq.poll();
+//            }
+//        }
+//        System.out.println(pq.peek());
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for(int i=0;i<arr.length;i++){
+            pq.add(arr[i]);
 
             if(pq.size()>k){
-                pq.poll();
+                System.out.print(pq.poll()+" ");
+            }
+
+            while(!pq.isEmpty()){
+                System.out.println(pq.poll()+" ");
             }
         }
-        System.out.println(pq.peek());
 
 
 
